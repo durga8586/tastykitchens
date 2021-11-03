@@ -1,0 +1,56 @@
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8fafc;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.logo-site-container {
+  display: flex;
+}
+.website-logo4 {
+  width: 53px;
+  height: 43px;
+  margin-top: 12px;
+}
+
+.website-name {
+  color: #f7931e;
+  font-family: DM Sans;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  margin-left: 15px;
+}
+.route-container {
+  display: flex;
+}
+
+.nav-btn-container {
+  display: flex;
+  list-style-type: none;
+}
+
+.home-nav {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.355556px;
+  color: #334155;
+  margin-right: 15px;
+}
+
+.logout-button {
+  background-color: #f7931e;
+  border-radius: 8px;
+  border-width: 0px;
+  width: 73px;
+  height: 32px;
+  color: white;
+  margin-top: 12px;
+}

@@ -1,0 +1,89 @@
+.main-container {
+  display: flex;
+}
+.login-form-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-container {
+  width: 50%;
+}
+.website-image {
+  width: 100%;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 456px;
+  background: #fefeff;
+  box-shadow: 0px 8px 40px rgba(7, 7, 7, 0.08);
+  border-radius: 8px;
+  padding-bottom: 80px;
+}
+
+.website-heading {
+  color: #f7931e;
+  font-family: DM Sans;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+.login-name {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 20px;
+}
+
+.input-label {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  color: #475569;
+  padding-bottom: 7px;
+}
+
+.input-field {
+  background: #e2e8f0;
+  border-radius: 2px;
+  height: 40px;
+  border-width: 0px;
+}
+
+.error-message {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ef4444;
+}
+
+.login-button {
+  height: 40px;
+  background: #f7931e;
+  border-radius: 8px;
+  color: white;
+  border-width: 0px;
+}
+
+.website-logo {
+  margin-left: 170px;
+  width: 53px;
+  height: 43px;
+}

@@ -1,0 +1,45 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f172a;
+  padding: 50px;
+}
+
+.footer-website-heading {
+  font-family: DM Sans;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.footer-para {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #ffffff;
+}
+.logo-name-container {
+  display: flex;
+  padding: 0px;
+}
+.react-icons-container {
+  display: flex;
+}
+
+.icon-container {
+  border-radius: 3px;
+  margin: 10px;
+  color: white;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+}
