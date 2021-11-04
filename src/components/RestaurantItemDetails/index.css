@@ -1,0 +1,73 @@
+.restaurant-details-main-container {
+  display: flex;
+  background-image: url('https://res.cloudinary.com/durga858/image/upload/c_scale,w_1297/v1636026201/tastykitchen/Frame_279_e74uzt.jpg');
+  background-size: cover;
+  width: 98.75vw;
+  height: 344px;
+  padding: 20px;
+  padding-left: 130px;
+}
+
+.restaurant-details-container {
+  display: flex;
+}
+
+.name-location-container {
+  margin-left: 20px;
+}
+
+.rating-cost-container {
+  display: flex;
+}
+.line {
+  width: 33px;
+  height: 0px;
+  border: 1px solid #919fb1;
+  transform: rotate(90deg);
+  margin-top: 34px;
+}
+
+.restaurant-img {
+  width: 445px;
+  height: 280px;
+  border-radius: 8px;
+}
+.restaurant-name {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+.restaurant-cuisine {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.restaurant-rating {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+.restaurant-Cost {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #e2e8f0;
+}

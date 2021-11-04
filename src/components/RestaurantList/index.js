@@ -4,6 +4,7 @@ import Cookies from 'js-cookie'
 
 import SortBy from '../SortBy'
 import RestaurantCard from '../RestaurantCard'
+import Pagination from '../Pagination'
 import './index.css'
 
 const sortByOptions = [
@@ -28,6 +29,7 @@ const apiStatusConstants = {
 class RestaurantList extends Component {
   state = {
     restaurantsList: [],
+    activePage: 1,
     apiStatus: apiStatusConstants.initial,
     activeOptionId: sortByOptions[0].value,
   }
@@ -41,8 +43,9 @@ class RestaurantList extends Component {
       apiStatus: apiStatusConstants.inProgress,
     })
     const jwtToken = Cookies.get('jwt_token')
-    const {activeOptionId} = this.state
-    const apiUrl = `https://apis.ccbp.in/restaurants-list?offset=0&limit=9&sort_by_rating=${activeOptionId}`
+    const {activeOptionId, activePage} = this.state
+    const offSet = (activePage - 1) * 9
+    const apiUrl = `https://apis.ccbp.in/restaurants-list?offset=${offSet}&limit=9&sort_by_rating=${activeOptionId}`
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -52,7 +55,6 @@ class RestaurantList extends Component {
     const response = await fetch(apiUrl, options)
     if (response.ok) {
       const fetchedData = await response.json()
-      console.log(fetchedData)
       const updatedData = fetchedData.restaurants.map(restaurant => ({
         costPerTwo: restaurant.cost_for_two,
         cuisine: restaurant.cuisine,
@@ -83,8 +85,22 @@ class RestaurantList extends Component {
     this.setState({activeOptionId}, this.getRestaurants)
   }
 
+  onIncrementActivePage = () => {
+    this.setState(
+      prevState => ({activePage: prevState.activePage + 1}),
+      this.getRestaurants,
+    )
+  }
+
+  onDecrementActivePage = () => {
+    this.setState(
+      prevState => ({activePage: prevState.activePage - 1}),
+      this.getRestaurants,
+    )
+  }
+
   renderRestaurantsListView = () => {
-    const {restaurantsList, activeOptionId} = this.state
+    const {restaurantsList, activeOptionId, activePage} = this.state
 
     return (
       <div className="restaurants-container">
@@ -111,12 +127,19 @@ class RestaurantList extends Component {
             />
           ))}
         </ul>
+        <div className="pagination-container">
+          <Pagination
+            activePage={activePage}
+            onIncrementActivePage={this.onIncrementActivePage}
+            onDecrementActivePage={this.onDecrementActivePage}
+          />
+        </div>
       </div>
     )
   }
 
   renderLoadingView = () => (
-    <div className="products-loader-container">
+    <div className="restaurants-list-loader">
       <Loader type="ThreeDots" color="#F7931E" height="50" width="50" />
     </div>
   )

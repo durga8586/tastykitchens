@@ -36,3 +36,9 @@
   flex-wrap: wrap;
   padding-left: 0;
 }
+
+.restaurants-list-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
