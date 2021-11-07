@@ -1,0 +1,33 @@
+.empty-cart-view-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-Items:center;
+}
+
+.empty-heading{
+    font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+line-height: 48px;
+text-align: center;
+color: #1E293B;
+}
+
+.empty-para{
+    font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+text-align: center;
+color: #64748B;
+}
+
+.empty-image{
+    Width :
+425px;
+Height :
+367px;
+}

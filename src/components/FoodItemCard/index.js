@@ -14,6 +14,9 @@ const FoodItemCard = props => {
         <p className="food-rating">{foodItem.rating}</p>
         <Counter />
       </div>
+      <button type='button' className = 'add-cart-button'>
+          Add
+      </button>
     </li>
   )
 }
