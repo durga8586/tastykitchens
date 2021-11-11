@@ -1,0 +1,22 @@
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9fbfe;
+  margin: 50px;
+  padding-left: 0px;
+}
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 150px;
+  margin-left: 150px;
+}
+.cart-header-names {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #475569;
+}

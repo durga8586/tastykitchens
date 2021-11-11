@@ -3,7 +3,18 @@ import {Component} from 'react'
 import './index.css'
 
 class Counter extends Component {
+  onDecrement = () => {
+    const {onClickDecrement} = this.props
+    onClickDecrement()
+  }
+
+  onIncrement = () => {
+    const {onClickIncrement} = this.props
+    onClickIncrement()
+  }
+
   render() {
+    const {quantity} = this.props
     return (
       <div className="add-buttons-container">
         <button
@@ -13,7 +24,7 @@ class Counter extends Component {
         >
           -
         </button>
-        <div className="items-count">0</div>
+        <div className="items-count">{quantity}</div>
         <button
           type="button"
           className="decrease-button"

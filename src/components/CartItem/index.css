@@ -1,0 +1,33 @@
+.cart-items-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+
+.cart-img-name-container {
+  display: flex;
+  width: 40%;
+}
+
+.cart-item-image {
+  width: 136px;
+  height: 100px;
+  border-radius: 8px;
+}
+.cart-item-heading {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #183b56;
+  padding-top: 20px;
+}
+.counter-container {
+  padding-right: 290px;
+}
