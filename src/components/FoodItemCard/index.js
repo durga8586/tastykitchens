@@ -72,7 +72,7 @@ class FoodItemCard extends Component {
     const {isRenderCounter, quantity} = this.state
 
     return (
-      <li className="food-item-container">
+      <li className="food-item-container" testid="foodItem">
         <img
           src={foodItem.imageUrl}
           className="food-image"

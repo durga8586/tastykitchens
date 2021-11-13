@@ -1,4 +1,4 @@
-.empty-cart-view-container {
+.order-placed-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,17 +6,16 @@
   padding: 50px;
 }
 
-.empty-heading {
+.payment-heading {
   font-family: DM Sans;
   font-style: normal;
   font-weight: 500;
-  font-size: 32px;
-  line-height: 48px;
+  font-size: 24px;
+  line-height: 32px;
   text-align: center;
   color: #1e293b;
 }
-
-.empty-para {
+.wishing-text {
   font-family: DM Sans;
   font-style: normal;
   font-weight: normal;
@@ -26,7 +25,15 @@
   color: #64748b;
 }
 
-.empty-image {
-  width: 425px;
-  height: 367px;
+.home-button3 {
+  background: #f7931e;
+  border-radius: 8px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+  height: 32px;
+  border-width: 0px;
 }

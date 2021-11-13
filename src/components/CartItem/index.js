@@ -19,7 +19,7 @@ const CartItem = props => {
         <Counter quantity={cartItem.quantity} />
       </div>
       <div className="cost-container">
-        <p className="cart-cost">Rs. {cartItem.cost}</p>
+        <p className="cart-cost">Rs. {cartItem.cost * cartItem.quantity}.00</p>
       </div>
     </li>
   )

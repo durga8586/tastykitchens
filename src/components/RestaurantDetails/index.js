@@ -90,8 +90,8 @@ class RestaurantDetails extends Component {
   }
 
   renderLoadingView = () => (
-    <div className="products-details-loader-container" testid="loader">
-      <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
+    <div className="loader-container" testid="restaurant-details-loader">
+      <Loader type="ThreeDots" color="#F7931E" height="50" width="50" />
     </div>
   )
 

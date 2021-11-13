@@ -1,4 +1,4 @@
-import {Link} from 'react'
+import {Link} from 'react-router-dom'
 
 import './index.css'
 
@@ -7,7 +7,7 @@ const EmptyCartView = () => (
     <img
       src="https://res.cloudinary.com/durga858/image/upload/v1635826353/tastykitchen/cooking_1_1_ylqsrx.jpg"
       className="empty-image"
-      alt="no orders"
+      alt="empty cart"
     />
     <h1 className="empty-heading">No Orders Yet!</h1>
     <p className="empty-para">
@@ -20,4 +20,5 @@ const EmptyCartView = () => (
     </Link>
   </div>
 )
+
 export default EmptyCartView
