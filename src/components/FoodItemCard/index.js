@@ -1,7 +1,5 @@
 import {Component} from 'react'
 
-import Counter from '../Counter'
-
 import './index.css'
 
 class FoodItemCard extends Component {
@@ -13,29 +11,29 @@ class FoodItemCard extends Component {
   onAddToCart = () => {
     const {foodItem} = this.props
     const {quantity} = this.state
-    const cartList = localStorage.getItem('cartList')
+    const cartList = localStorage.getItem('cartData')
     const parsedCartList = JSON.parse(cartList)
     const newCartItem = {...foodItem, quantity}
     if (parsedCartList === null) {
       const updatedCartList = [newCartItem]
-      localStorage.setItem('cartList', JSON.stringify(updatedCartList))
+      localStorage.setItem('cartData', JSON.stringify(updatedCartList))
     } else {
       const updatedCartList = [...parsedCartList, newCartItem]
-      localStorage.setItem('cartList', JSON.stringify(updatedCartList))
+      localStorage.setItem('cartData', JSON.stringify(updatedCartList))
     }
     this.setState(prevState => ({isRenderCounter: !prevState.isRenderCounter}))
   }
 
-  onClickDecrement = () => {
+  onDecrement = () => {
     const {quantity} = this.state
     const {foodItem} = this.props
-    const cartList = localStorage.getItem('cartList')
+    const cartList = localStorage.getItem('cartData')
     const parsedCartList = JSON.parse(cartList)
     if (quantity === 1) {
       const updatedCartList = parsedCartList.filter(
         eachItem => eachItem.id !== foodItem.id,
       )
-      localStorage.setItem('cartList', JSON.stringify(updatedCartList))
+      localStorage.setItem('cartData', JSON.stringify(updatedCartList))
       this.setState(prevState => ({
         isRenderCounter: !prevState.isRenderCounter,
       }))
@@ -47,14 +45,14 @@ class FoodItemCard extends Component {
         }
         return eachCartItem
       })
-      localStorage.setItem('cartList', JSON.stringify(updatedCartList))
+      localStorage.setItem('cartData', JSON.stringify(updatedCartList))
       this.setState(prevState => ({quantity: prevState.quantity - 1}))
     }
   }
 
-  onClickIncrement = () => {
+  onIncrement = () => {
     const {foodItem} = this.props
-    const cartList = localStorage.getItem('cartList')
+    const cartList = localStorage.getItem('cartData')
     const parsedCartList = JSON.parse(cartList)
     const updatedCartList = parsedCartList.map(eachCartItem => {
       if (foodItem.id === eachCartItem.id) {
@@ -63,7 +61,7 @@ class FoodItemCard extends Component {
       }
       return eachCartItem
     })
-    localStorage.setItem('cartList', JSON.stringify(updatedCartList))
+    localStorage.setItem('cartData', JSON.stringify(updatedCartList))
     this.setState(prevState => ({quantity: prevState.quantity + 1}))
   }
 
@@ -83,11 +81,27 @@ class FoodItemCard extends Component {
           <p className="food-cost">{foodItem.cost}</p>
           <p className="food-rating">{foodItem.rating}</p>
           {isRenderCounter && (
-            <Counter
-              quantity={quantity}
-              onClickDecrement={this.onClickDecrement}
-              onClickIncrement={this.onClickIncrement}
-            />
+            <div className="add-buttons-container">
+              <button
+                type="button"
+                className="decrease-button"
+                onClick={this.onDecrement}
+                testid="decrement-count"
+              >
+                -
+              </button>
+              <div className="items-count" testid="active-count">
+                {quantity}
+              </div>
+              <button
+                type="button"
+                className="decrease-button"
+                onClick={this.onIncrement}
+                testid="increment-count"
+              >
+                +
+              </button>
+            </div>
           )}
           {!isRenderCounter && (
             <button

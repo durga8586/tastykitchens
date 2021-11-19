@@ -33,6 +33,7 @@ class RestaurantDetails extends Component {
     this.setState({
       apiStatus: apiStatusConstants.inProgress,
     })
+
     const jwtToken = Cookies.get('jwt_token')
     const apiUrl = `https://apis.ccbp.in/restaurants-list/${id}`
     const options = {
@@ -55,11 +56,11 @@ class RestaurantDetails extends Component {
         id: fetchedData.id,
       }
       const updatedFoodData = fetchedData.food_items.map(eachItem => ({
-        imageUrl: eachItem.image_url,
         cost: eachItem.cost,
-        name: eachItem.name,
-        rating: eachItem.rating,
         id: eachItem.id,
+        imageUrl: eachItem.image_url,
+        rating: eachItem.rating,
+        name: eachItem.name,
       }))
       this.setState({
         restaurantData: updatedRestaurantData,

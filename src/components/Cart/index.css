@@ -7,18 +7,19 @@
 }
 .cart-header {
   display: flex;
-  justify-content: space-between;
-  margin-right: 150px;
-  margin-left: 150px;
+  justify-content: space-around;
+  align-items: center;
 }
 .cart-header-names {
   font-family: DM Sans;
+  text-align: center;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.2px;
   color: #475569;
+  width: 50%;
 }
 .cart-summary-container {
   display: flex;

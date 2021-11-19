@@ -3,16 +3,6 @@ import {Component} from 'react'
 import './index.css'
 
 class Counter extends Component {
-  onDecrement = () => {
-    const {onClickDecrement} = this.props
-    onClickDecrement()
-  }
-
-  onIncrement = () => {
-    const {onClickIncrement} = this.props
-    onClickIncrement()
-  }
-
   render() {
     const {quantity} = this.props
     return (
