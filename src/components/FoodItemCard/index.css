@@ -43,3 +43,26 @@
   align-items: center;
   color: #0a1f44;
 }
+.decrease-button {
+  color: #475569;
+  background-color: white;
+  border-radius: 2px;
+  border-width: 1px;
+  border-color: black;
+  width: 22px;
+  height: 22px;
+}
+
+.add-buttons-container {
+  display: flex;
+}
+
+.items-count {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #475569;
+}

@@ -31,7 +31,7 @@ class RestaurantList extends Component {
     restaurantsList: [],
     activePage: 1,
     apiStatus: apiStatusConstants.initial,
-    activeOptionId: sortByOptions[0].value,
+    activeOptionId: sortByOptions[1].value,
   }
 
   componentDidMount() {

@@ -21,12 +21,10 @@ class Footer extends Component {
           <h1 className="footer-website-heading">Tasty Kitchens</h1>
         </div>
         <p className="footer-para">
-          The only thing we are serious about is food.
-          <br />
-          Contact us on
+          The only thing we are serious about is food. Contact us on
         </p>
         <div className="react-icons-container">
-          <div testid="pinterest-social-icon" className="icon-container">
+          <div testid="pintrest-social-icon" className="icon-container">
             <FaPinterestSquare className="icon" />
           </div>
           <div testid="instagram-social-icon" className="icon-container">

@@ -13,7 +13,7 @@ const SortBy = props => {
     <div className="sort-by-header">
       <div className="sort-by-container">
         <BsFilterLeft className="sort-by-icon" />
-        <p className="sort-by">Sort by</p>
+        <p className="sort-by">Sort By</p>
         <select
           className="sort-by-select"
           value={activeOptionId}

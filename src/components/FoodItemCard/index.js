@@ -13,7 +13,13 @@ class FoodItemCard extends Component {
     const {quantity} = this.state
     const cartList = localStorage.getItem('cartData')
     const parsedCartList = JSON.parse(cartList)
-    const newCartItem = {...foodItem, quantity}
+    const newCartItem = {
+      cost: foodItem.cost,
+      quantity,
+      id: foodItem.id,
+      imageUrl: foodItem.imageUrl,
+      name: foodItem.name,
+    }
     if (parsedCartList === null) {
       const updatedCartList = [newCartItem]
       localStorage.setItem('cartData', JSON.stringify(updatedCartList))
@@ -90,9 +96,13 @@ class FoodItemCard extends Component {
               >
                 -
               </button>
-              <div className="items-count" testid="active-count">
+              <button
+                type="button"
+                className="items-count"
+                testid="active-count"
+              >
                 {quantity}
-              </div>
+              </button>
               <button
                 type="button"
                 className="decrease-button"

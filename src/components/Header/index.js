@@ -1,5 +1,7 @@
-import {Link, withRouter} from 'react-router-dom'
-
+import Popup from 'reactjs-popup'
+import {withRouter, Link} from 'react-router-dom'
+import {GiHamburgerMenu} from 'react-icons/gi'
+import {IoMdClose} from 'react-icons/io'
 import Cookies from 'js-cookie'
 
 import './index.css'
@@ -42,6 +44,49 @@ const Header = props => {
           >
             Logout
           </button>
+        </div>
+        <div className="hum-burger-menu">
+          <Popup
+            modal
+            trigger={
+              <button
+                type="button"
+                data-testid="hamburgerIconButton"
+                className="hum-burger-button"
+              >
+                <GiHamburgerMenu size="30" />
+              </button>
+            }
+            className="popup-content"
+          >
+            {close => (
+              <div className="modal-container">
+                <ul className="nav-btn-container">
+                  <Link to="/" onClick={() => close()}>
+                    <li className="home-nav">Home</li>
+                  </Link>
+                  <Link to="/cart" onClick={() => close()}>
+                    <li className="home-nav">Cart</li>
+                  </Link>
+                </ul>
+                <button
+                  type="button"
+                  className="logout-button"
+                  onClick={onClickLogout}
+                >
+                  Logout
+                </button>
+                <button
+                  type="button"
+                  testid="closeButton"
+                  className="humburger-close-button"
+                  onClick={() => close()}
+                >
+                  <IoMdClose size="30" color="#616e7c" />
+                </button>
+              </div>
+            )}
+          </Popup>
         </div>
       </div>
     </nav>

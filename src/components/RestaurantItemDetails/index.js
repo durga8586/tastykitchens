@@ -23,13 +23,13 @@ const RestaurantItemDetails = props => {
           <div className="rating-cost-container">
             <div>
               <p className="restaurant-rating"> {rating}</p>
-              <p className="restaurant-Cost">{reviewsCount}+ Ratings</p>
+              <p className="restaurant-Cost">{reviewsCount}</p>
             </div>
             <div>
               <hr className="line" />
             </div>
             <div>
-              <p className="restaurant-rating"> Rs. {costForTwo}</p>
+              <p className="restaurant-rating">{costForTwo}</p>
               <p className="restaurant-Cost">Cost for two</p>
             </div>
           </div>

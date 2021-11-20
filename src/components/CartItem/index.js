@@ -27,18 +27,18 @@ const CartItem = props => {
             type="button"
             className="decrease-button"
             onClick={onDecrementItem}
-            testid="decrement-count"
+            testid="decrement-quantity"
           >
             -
           </button>
-          <div className="items-count" testid="active-count">
+          <p className="items-count" testid="item-quantity">
             {cartItem.quantity}
-          </div>
+          </p>
           <button
             type="button"
             className="decrease-button"
             onClick={onIncrementItem}
-            testid="increment-count"
+            testid="increment-quantity"
           >
             +
           </button>

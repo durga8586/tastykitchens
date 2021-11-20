@@ -15,7 +15,7 @@ const EmptyCartView = () => (
     </p>
     <Link to="/">
       <button type="button" className="home-button">
-        Order now
+        Order Now
       </button>
     </Link>
   </div>
