@@ -96,13 +96,9 @@ class FoodItemCard extends Component {
               >
                 -
               </button>
-              <button
-                type="button"
-                className="items-count"
-                testid="active-count"
-              >
+              <div type="button" className="items-count" testid="active-count">
                 {quantity}
-              </button>
+              </div>
               <button
                 type="button"
                 className="decrease-button"

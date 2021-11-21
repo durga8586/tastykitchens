@@ -16,7 +16,7 @@ const App = () => (
     <ProtectedRoute exact path="/cart" component={Cart} />
     <ProtectedRoute
       exact
-      path="/restaurants-list/:id"
+      path="/restaurant/:id"
       component={RestaurantDetails}
     />
     <Route path="/not-found" component={NotFound} />
