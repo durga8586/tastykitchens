@@ -61,7 +61,7 @@ export default class ReactSlider extends Component {
       slidesToScroll: 1,
     }
     return (
-      <div className="container">
+      <div className="offer-container">
         <Slider {...settings}>
           {carousalList.map(eachCarousal => (
             <CarousalItem carousal={eachCarousal} key={eachCarousal.id} />

@@ -1,9 +1,12 @@
 .restaurants-container {
   display: flex;
   flex-direction: column;
-
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 50px;
+}
+@media screen and (max-width: 767px) {
+  .restaurants-container {
+    padding: 20px;
+  }
 }
 
 .main-heading {
@@ -12,7 +15,12 @@
   font-weight: bold;
   font-size: 32px;
   color: #183b56;
-  line-height: 0px;
+}
+
+@media screen and (max-width: 767px) {
+  .main-heading {
+    font-size: 20px;
+  }
 }
 
 .para {
@@ -26,8 +34,18 @@
 
 .para-sorted-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .para-sorted-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 
 .restaurants-list {

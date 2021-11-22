@@ -1,13 +1,6 @@
 .sort-by-header {
   display: flex;
-  margin-top: 24px;
   flex-wrap: wrap;
-}
-
-@media screen and (min-width: 768px) {
-  .sort-by-header {
-    margin-top: 32px;
-  }
 }
 
 .sort-by-container {

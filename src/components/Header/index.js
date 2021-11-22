@@ -24,17 +24,17 @@ const Header = props => {
               alt="website logo"
             />
           </Link>
-          <Link to="/">
-            <h1 className="website-name">Tasty Kitchens</h1>
+          <Link className="website-name" to="/">
+            <h1>Tasty Kitchens</h1>
           </Link>
         </div>
         <div className="route-container">
           <ul className="nav-btn-container">
-            <Link to="/">
-              <li className="home-nav">Home</li>
+            <Link to="/" className="home-nav">
+              <li>Home</li>
             </Link>
-            <Link to="/cart">
-              <li className="home-nav">Cart</li>
+            <Link to="/cart" className="home-nav">
+              <li>Cart</li>
             </Link>
           </ul>
           <button
@@ -47,6 +47,7 @@ const Header = props => {
         </div>
         <div className="hum-burger-menu">
           <Popup
+            style={{position: 'relative'}}
             modal
             trigger={
               <button
@@ -54,7 +55,7 @@ const Header = props => {
                 data-testid="hamburgerIconButton"
                 className="hum-burger-button"
               >
-                <GiHamburgerMenu size="30" />
+                <GiHamburgerMenu />
               </button>
             }
             className="popup-content"
@@ -62,11 +63,11 @@ const Header = props => {
             {close => (
               <div className="modal-container">
                 <ul className="nav-btn-container">
-                  <Link to="/" onClick={() => close()}>
-                    <li className="home-nav">Home</li>
+                  <Link className="home-nav" to="/" onClick={() => close()}>
+                    <li>Home</li>
                   </Link>
-                  <Link to="/cart" onClick={() => close()}>
-                    <li className="home-nav">Cart</li>
+                  <Link className="home-nav" to="/cart" onClick={() => close()}>
+                    <li>Cart</li>
                   </Link>
                 </ul>
                 <button

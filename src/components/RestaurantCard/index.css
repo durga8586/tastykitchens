@@ -1,14 +1,10 @@
 .restaurant-card-container {
   display: flex;
-  margin-right: 30px;
-  margin-bottom: 30px;
-  width: 350px;
 }
 
 .name-cuisine-rating-container {
   margin-left: 12px;
-  width: 174px;
-  height: 78px;
+  margin-top: 5px;
 }
 .restaurant-image {
   width: 160px;
@@ -27,6 +23,13 @@
   color: #334155;
   line-height: 24px;
 }
+
+@media screen and (max-width: 767px) {
+  .name {
+    font-size: 16px;
+    margin: 0px;
+  }
+}
 .cuisine {
   font-family: DM Sans;
   font-style: normal;
@@ -36,8 +39,17 @@
   color: #64748b;
   line-height: 0px;
 }
+
+@media screen and (max-width: 767px) {
+  .cuisine {
+    line-height: 24px;
+    font-size: 12px;
+    margin: 0px;
+  }
+}
 .rating-container {
   display: flex;
+  align-items: center;
 }
 
 .star-rating {
@@ -57,24 +69,20 @@
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
-  line-height: 16px;
   display: flex;
   align-items: center;
   color: #64748b;
-  line-height: 0px;
 }
 
 .link-item {
   text-decoration: none;
-  margin-bottom: 48px;
-  width: 350px;
-  flex-grow: 0;
+  margin-bottom: 20px;
+  flex-grow: 1;
   flex-shrink: 1;
-  margin-right: 20px;
+  width: 350px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .link-item {
-    width: 300px;
-  }
+.star {
+  color: yellow;
+  margin-right: 5px;
 }

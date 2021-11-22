@@ -1,3 +1,5 @@
+import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from 'react-icons/md'
+
 import './index.css'
 
 const Pagination = props => {
@@ -24,11 +26,7 @@ const Pagination = props => {
           className="left-button"
           onClick={onClickLeftButton}
         >
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/left-arrow-img.png"
-            alt="left arrow"
-            className="arrow"
-          />
+          <MdKeyboardArrowLeft size="50" />
         </button>
       </div>
       <p className="page-number">
@@ -41,11 +39,7 @@ const Pagination = props => {
           className="left-button"
           onClick={onClickRightButton}
         >
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/right-arrow-img.png"
-            alt="right arrow"
-            className="arrow"
-          />
+          <MdKeyboardArrowRight size="50" />
         </button>
       </div>
     </div>

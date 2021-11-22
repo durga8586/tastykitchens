@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom'
+import {AiFillStar} from 'react-icons/ai'
 
 import './index.css'
 
@@ -13,8 +14,11 @@ const RestaurantCard = props => {
           <h1 className="name">{name}</h1>
           <p className="cuisine">{cuisine}</p>
           <div className="rating-container">
+            <AiFillStar className="star" />
             <p className="star-rating">{userRating.rating}</p>
-            <h1 className="total-review">({userRating.total_reviews})</h1>
+            <h1 className="total-review">
+              ({userRating.total_reviews} ratings)
+            </h1>
           </div>
         </div>
       </li>

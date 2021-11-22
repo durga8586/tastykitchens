@@ -17,6 +17,12 @@
   margin-left: 10px;
 }
 
+@media screen and (max-width: 767px) {
+  .footer-website-heading {
+    font-size: 20px;
+  }
+}
+
 .footer-para {
   font-family: DM Sans;
   font-style: normal;
@@ -26,9 +32,15 @@
   text-align: center;
   color: #ffffff;
 }
+
+@media screen and (max-width: 767px) {
+  .footer-para {
+    font-size: 14px;
+  }
+}
 .logo-name-container {
   display: flex;
-  padding: 0px;
+  align-items: center;
 }
 .react-icons-container {
   display: flex;
@@ -42,4 +54,8 @@
 .icon {
   width: 30px;
   height: 30px;
+}
+.footer-logo {
+  width: 40px;
+  height: 32px;
 }

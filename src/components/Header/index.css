@@ -1,19 +1,30 @@
+.nav-container {
+  display: flex;
+  align-items: center;
+}
 .nav-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background-color: #f8fafc;
-  padding-left: 50px;
-  padding-right: 50px;
+  width: 100vw;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .logo-site-container {
   display: flex;
+  align-items: center;
 }
 .website-logo4 {
   width: 53px;
   height: 43px;
-  margin-top: 12px;
+}
+
+@media screen and (max-width: 767px) {
+  .website-logo4 {
+    width: 35px;
+    height: 28px;
+  }
 }
 
 .website-name {
@@ -24,9 +35,17 @@
   font-size: 24px;
   text-align: center;
   margin-left: 15px;
+  text-decoration: none;
 }
+@media screen and (max-width: 767px) {
+  .website-name {
+    font-size: 15px;
+  }
+}
+
 .route-container {
   display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -49,6 +68,7 @@
   letter-spacing: -0.355556px;
   color: #334155;
   margin-right: 15px;
+  text-decoration: none;
 }
 
 .logout-button {
@@ -58,7 +78,7 @@
   width: 73px;
   height: 32px;
   color: white;
-  margin-top: 12px;
+  cursor: pointer;
 }
 
 .modal-container {
@@ -69,6 +89,21 @@
   flex-grow: 1;
   width: 90%;
 }
+.popup-content {
+  position: relative !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #ffffff;
+  width: 100vw;
+  margin: 0px;
+}
+
+.hum-burger-menu {
+  position: relative !important;
+}
+
 @media screen and (min-width: 768px) {
   .hum-burger-menu {
     display: none;
@@ -80,12 +115,11 @@
   border: none;
   outline: none;
   cursor: pointer;
-  width: 42px;
-  height: 35px;
+  width: 050px;
+  height: 50px;
 }
 
 .humburger-close-button {
-  align-self: flex-end;
   background-color: transparent;
   width: 30px;
   height: 30px;
