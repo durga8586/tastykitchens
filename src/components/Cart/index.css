@@ -1,40 +1,34 @@
-.cart-container {
+.cart-main-container {
   display: flex;
   flex-direction: column;
   background-color: #f9fbfe;
   margin: 50px;
+  border: 1px solid rgba(163, 182, 212, 0.1);
+  padding: 50px;
+  padding-top: 0px;
+}
+@media screen and (max-width: 767px) {
+  .cart-main-container {
+    padding: 20px;
+    margin: 20px;
+    flex-grow: 1;
+  }
+}
+
+.cart-container {
+  list-style-type: none;
   padding-left: 0px;
 }
-.cart-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.cart-header-names {
-  font-family: DM Sans;
-  text-align: center;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.2px;
-  color: #475569;
-  width: 50%;
-}
+
 .cart-summary-container {
   display: flex;
   flex-direction: column;
-  margin: 50px;
-  background-color: #f9fbfe;
 }
 
 .order-price-container {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  margin-top: 0px;
-  padding-left: 75px;
-  padding-right: 135px;
+  align-items: center;
 }
 
 .order-total {
@@ -42,37 +36,46 @@
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
-  line-height: 32px;
   color: #3e4c59;
 }
-.place-order-button {
-  background: #f7931e;
-  border-radius: 8px;
-  font-family: DM Sans;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  color: #ffffff;
-  width: 99px;
-  height: 32px;
-  border-width: 0px;
+@media screen and (max-width: 767px) {
+  .order-total {
+    font-size: 16px;
+  }
 }
 
 .total-price {
   font-family: DM Sans;
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 32px;
   text-align: right;
   color: #3e4c59;
 }
 
+@media screen and (min-width: 768px) {
+  .total-price {
+    font-size: 24px;
+  }
+}
 .place-order-button-container {
   display: flex;
   justify-content: flex-end;
-  padding-top: 10px;
-  padding-right: 140px;
-  padding-bottom: 20px;
+}
+
+.place-order-button {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  background: #f7931e;
+  border-radius: 8px;
+  color: #ffffff;
+  width: 100px;
+  height: 32px;
+  border-width: 0px;
+}
+.line1 {
+  border: 1px dashed #cbd2d9;
 }

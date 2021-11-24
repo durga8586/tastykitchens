@@ -76,7 +76,7 @@ export default class ReactSlider extends Component {
       testid="restaurants-offers-loader"
       className="carousal-loader-container"
     >
-      <Loader type="ThreeDots" color="#f7931e" height="50" width="50" />
+      <Loader type="TailSpin" color="#f7931e" height="50" width="50" />
     </div>
   )
 

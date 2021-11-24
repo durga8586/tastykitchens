@@ -1,15 +1,10 @@
-.main-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
-}
-
 .not-found-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  padding: 50px;
 }
 
 .not-found-heading {
@@ -17,9 +12,13 @@
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
-  line-height: 48px;
   text-align: center;
   color: #1e293b;
+}
+@media screen and (max-width: 767px) {
+  .not-found-heading {
+    font-size: 20px;
+  }
 }
 
 .not-found-para {
@@ -27,14 +26,24 @@
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
-  line-height: 32px;
   text-align: center;
   color: #475569;
 }
+@media screen and (max-width: 767px) {
+  .not-found-para {
+    font-size: 14px;
+  }
+}
 
 .not-found-image {
-  width: 269px;
-  height: 297px;
+  width: 20%;
+}
+
+@media screen and (max-width: 767px) {
+  .not-found-image {
+    width: 203px;
+    height: 203px;
+  }
 }
 
 .home-button {
@@ -48,5 +57,4 @@
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 24px;
 }

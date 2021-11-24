@@ -1,5 +1,6 @@
 .order-placed-container {
   display: flex;
+  height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -15,6 +16,11 @@
   text-align: center;
   color: #1e293b;
 }
+@media screen and (max-width: 767px) {
+  .payment-heading {
+    font-size: 20px;
+  }
+}
 .wishing-text {
   font-family: DM Sans;
   font-style: normal;
@@ -23,6 +29,11 @@
   line-height: 24px;
   text-align: center;
   color: #64748b;
+}
+@media screen and (max-width: 767px) {
+  .wishing-text {
+    font-size: 14px;
+  }
 }
 
 .home-button3 {
@@ -36,4 +47,19 @@
   color: #ffffff;
   height: 32px;
   border-width: 0px;
+}
+
+.tick-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #22c55e;
+  border-radius: 20px;
+}
+.tick {
+  width: 30px;
+  height: 30px;
+  color: white;
 }

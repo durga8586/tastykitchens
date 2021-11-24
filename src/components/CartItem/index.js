@@ -19,9 +19,9 @@ const CartItem = props => {
           alt={cartItem.name}
           className="cart-item-image"
         />
-        <h1 className="cart-item-heading">{cartItem.name}</h1>
       </div>
-      <div className="counter-container">
+      <div className="food-cart-container">
+        <h1 className="cart-item-heading">{cartItem.name}</h1>
         <div className="add-buttons-container">
           <button
             type="button"
@@ -43,8 +43,6 @@ const CartItem = props => {
             +
           </button>
         </div>
-      </div>
-      <div className="cost-container">
         <p className="cart-cost">Rs. {cartItem.cost * cartItem.quantity}.00</p>
       </div>
     </li>

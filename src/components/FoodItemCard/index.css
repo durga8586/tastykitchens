@@ -1,8 +1,20 @@
 .food-item-container {
   display: flex;
   width: 40%;
-  margin-top: 40px;
-  margin-left: 60px;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+@media screen and (max-width: 767px) {
+  .food-item-container {
+    width: 100%;
+  }
+}
+
+.rating-container2 {
+  display: flex;
+  align-items: center;
+  padding-bottom: 010px;
 }
 
 .food-image {
@@ -10,10 +22,18 @@
   width: 255px;
   height: 150px;
 }
+@media screen and (max-width: 767px) {
+  .food-image {
+    width: 160px;
+    height: 100px;
+  }
+}
+
 .food-name-cost-container {
   display: flex;
   flex-direction: column;
   margin-left: 15px;
+  justify-content: center;
 }
 
 .food-name {
@@ -21,17 +41,28 @@
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
-  line-height: 16px;
-  letter-spacing: 0.2px;
+  margin: 0px;
+  padding-bottom: 5px;
   color: #334155;
+}
+@media screen and (max-width: 767px) {
+  .food-name {
+    font-size: 16px;
+  }
 }
 .food-cost {
   font-family: DM Sans;
   font-style: normal;
   font-weight: 500;
+  padding-bottom: 5px;
   font-size: 16px;
-  line-height: 10px;
+  margin: 0px;
   color: #334155;
+}
+@media screen and (max-width: 767px) {
+  .food-cost {
+    font-size: 14px;
+  }
 }
 
 .food-rating {
@@ -39,9 +70,15 @@
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
-  line-height: 10px;
+  margin: 0px;
   align-items: center;
   color: #0a1f44;
+}
+
+@media screen and (max-width: 767px) {
+  .food-rating {
+    font-size: 14px;
+  }
 }
 .decrease-button {
   color: #475569;
@@ -65,4 +102,14 @@
   font-weight: 500;
   font-size: 16px;
   color: #475569;
+}
+.add-cart-button {
+  border: 1.44828px solid #ffa412;
+  font-weight: 500;
+  font-size: 12px;
+  color: #ffa412;
+  background-color: transparent;
+  width: 50px;
+  height: 25px;
+  border-radius: 3px;
 }

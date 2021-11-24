@@ -1,73 +1,123 @@
 .restaurant-details-main-container {
   display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 400px;
   background-image: url('https://res.cloudinary.com/durga858/image/upload/c_scale,w_1297/v1636026201/tastykitchen/Frame_279_e74uzt.jpg');
   background-size: cover;
-  width: 98.75vw;
-  height: 344px;
-  padding: 20px;
-  padding-left: 130px;
+  padding-left: 050px;
+}
+@media screen and (max-width: 767px) {
+  .restaurant-details-main-container {
+    align-items: flex-start;
+    padding: 0px;
+    height: 250px;
+  }
 }
 
 .restaurant-details-container {
   display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .restaurant-details-container {
+    align-items: flex-start;
+  }
 }
 
 .name-location-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-left: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .name-location-container {
+    margin: 10px;
+  }
 }
 
 .rating-cost-container {
   display: flex;
+  align-items: center;
 }
 .line {
   width: 33px;
-  height: 0px;
   border: 1px solid #919fb1;
   transform: rotate(90deg);
-  margin-top: 34px;
+}
+
+.star1 {
+  color: #ffa412;
+}
+
+.rating-container1 {
+  display: flex;
 }
 
 .restaurant-img {
   width: 445px;
   height: 280px;
   border-radius: 8px;
+  flex-shrink: 1;
 }
+@media screen and (max-width: 767px) {
+  .restaurant-img {
+    width: 170px;
+    height: 170px;
+    border-bottom-right-radius: 200px;
+  }
+}
+
 .restaurant-name {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 36px;
-  line-height: 48px;
-  letter-spacing: 0.2px;
   color: #ffffff;
+  margin: 0px;
+  padding-bottom: 10px;
 }
-
+@media screen and (max-width: 767px) {
+  .restaurant-name {
+    font-size: 16px;
+  }
+}
 .restaurant-cuisine {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  line-height: 24px;
+  margin: 0px;
   color: #ffffff;
+  padding-bottom: 10px;
 }
-
+@media screen and (max-width: 767px) {
+  .restaurant-cuisine {
+    font-size: 12px;
+  }
+}
 .restaurant-rating {
   font-family: DM Sans;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
-  line-height: 16px;
   display: flex;
+  margin: 0px;
+  padding-bottom: 10px;
   align-items: center;
   color: #ffffff;
 }
 .restaurant-Cost {
   font-family: DM Sans;
   font-style: normal;
+  margin: 0px;
   font-weight: normal;
   font-size: 12px;
-  line-height: 16px;
   display: flex;
   align-items: center;
   color: #e2e8f0;
+  padding-bottom: 10px;
 }

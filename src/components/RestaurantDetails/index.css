@@ -2,3 +2,10 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

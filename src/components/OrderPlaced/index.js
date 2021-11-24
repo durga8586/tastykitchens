@@ -1,3 +1,4 @@
+import {TiTick} from 'react-icons/ti'
 import {Link} from 'react-router-dom'
 
 import './index.css'
@@ -7,6 +8,9 @@ const OrderPlaced = () => {
 
   return (
     <div className="order-placed-container">
+      <div className="tick-cont">
+        <TiTick className="tick" />
+      </div>
       <h1 className="payment-heading">Payment Successful</h1>
       <p className="wishing-text">
         Thank you for ordering <br />

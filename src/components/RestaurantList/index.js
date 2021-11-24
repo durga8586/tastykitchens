@@ -140,7 +140,7 @@ class RestaurantList extends Component {
 
   renderLoadingView = () => (
     <div className="restaurants-list-loader" testid="restaurants-list-loader">
-      <Loader type="ThreeDots" color="#F7931E" height="50" width="50" />
+      <Loader type="TailSpin" color="#F7931E" height="50" width="50" />
     </div>
   )
 

@@ -45,7 +45,6 @@ class RestaurantDetails extends Component {
     const response = await fetch(apiUrl, options)
     if (response.ok) {
       const fetchedData = await response.json()
-      console.log(fetchedData)
       const updatedRestaurantData = {
         costForTwo: fetchedData.cost_for_two,
         cuisine: fetchedData.cuisine,
@@ -94,7 +93,7 @@ class RestaurantDetails extends Component {
 
   renderLoadingView = () => (
     <div className="loader-container" testid="restaurant-details-loader">
-      <Loader type="ThreeDots" color="#F7931E" height="50" width="50" />
+      <Loader type="TailSpin" color="#F7931E" height="25" width="25" />
     </div>
   )
 
@@ -115,9 +114,7 @@ class RestaurantDetails extends Component {
     return (
       <>
         <Header />
-        <div className="restaurant-details-container">
-          {this.renderRestaurantDetails()}
-        </div>
+        {this.renderRestaurantDetails()}
         <Footer />
       </>
     )

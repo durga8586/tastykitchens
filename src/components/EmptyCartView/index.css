@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  height: 100vh;
 }
 
 .empty-heading {
@@ -15,6 +15,11 @@
   text-align: center;
   color: #1e293b;
 }
+@media screen and (max-width: 767px) {
+  .empty-heading {
+    font-size: 20px;
+  }
+}
 
 .empty-para {
   font-family: DM Sans;
@@ -25,8 +30,18 @@
   text-align: center;
   color: #64748b;
 }
+@media screen and (max-width: 767px) {
+  .empty-para {
+    font-size: 14px;
+  }
+}
 
 .empty-image {
-  width: 425px;
-  height: 367px;
+  width: 20%;
+}
+@media screen and (max-width: 767px) {
+  .empty-image {
+    width: 203px;
+    height: 175px;
+  }
 }

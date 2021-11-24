@@ -88,11 +88,6 @@ class Cart extends Component {
           <>
             <div className="cart-main-container">
               <ul className="cart-container">
-                <li className="cart-header">
-                  <h1 className="cart-header-names">Item</h1>
-                  <h1 className="cart-header-names">Quantity</h1>
-                  <h1 className="cart-header-names">Price</h1>
-                </li>
                 {cartList.map(eachItem => (
                   <CartItem
                     cartItem={eachItem}
@@ -102,6 +97,9 @@ class Cart extends Component {
                   />
                 ))}
               </ul>
+              <div>
+                <hr className="line1" />
+              </div>
               <div className="cart-summary-container">
                 <div className="order-price-container">
                   <h1 className="order-total">Order Total: </h1>

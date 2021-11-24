@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {AiFillStar} from 'react-icons/ai'
 
 import './index.css'
 
@@ -24,8 +25,22 @@ class FoodItemCard extends Component {
       const updatedCartList = [newCartItem]
       localStorage.setItem('cartData', JSON.stringify(updatedCartList))
     } else {
-      const updatedCartList = [...parsedCartList, newCartItem]
-      localStorage.setItem('cartData', JSON.stringify(updatedCartList))
+      const cartObject = parsedCartList.find(
+        eachCartItem => eachCartItem.id === foodItem.id,
+      )
+      if (cartObject) {
+        const updatedCartList = parsedCartList.map(eachCartItem => {
+          if (cartObject.id === eachCartItem.id) {
+            const updatedQuantity = eachCartItem.quantity + quantity
+            return {...eachCartItem, quantity: updatedQuantity}
+          }
+          return eachCartItem
+        })
+        localStorage.setItem('cartData', JSON.stringify(updatedCartList))
+      } else {
+        const updatedCartList = [...parsedCartList, newCartItem]
+        localStorage.setItem('cartData', JSON.stringify(updatedCartList))
+      }
     }
     this.setState(prevState => ({isRenderCounter: !prevState.isRenderCounter}))
   }
@@ -36,10 +51,24 @@ class FoodItemCard extends Component {
     const cartList = localStorage.getItem('cartData')
     const parsedCartList = JSON.parse(cartList)
     if (quantity === 1) {
-      const updatedCartList = parsedCartList.filter(
-        eachItem => eachItem.id !== foodItem.id,
+      const cartObject = parsedCartList.find(
+        eachCartItem => eachCartItem.id === foodItem.id,
       )
-      localStorage.setItem('cartData', JSON.stringify(updatedCartList))
+      if (cartObject.quantity > 1) {
+        const updatedCartList = parsedCartList.map(eachCartItem => {
+          if (cartObject.id === eachCartItem.id) {
+            const updatedQuantity = eachCartItem.quantity - 1
+            return {...eachCartItem, quantity: updatedQuantity}
+          }
+          return eachCartItem
+        })
+        localStorage.setItem('cartData', JSON.stringify(updatedCartList))
+      } else {
+        const updatedCartList = parsedCartList.filter(
+          eachItem => eachItem.id !== foodItem.id,
+        )
+        localStorage.setItem('cartData', JSON.stringify(updatedCartList))
+      }
       this.setState(prevState => ({
         isRenderCounter: !prevState.isRenderCounter,
       }))
@@ -84,8 +113,11 @@ class FoodItemCard extends Component {
         />
         <div className="food-name-cost-container">
           <h1 className="food-name">{foodItem.name}</h1>
-          <p className="food-cost">{foodItem.cost}</p>
-          <p className="food-rating">{foodItem.rating}</p>
+          <p className="food-cost">Rs. {foodItem.cost}</p>
+          <div className="rating-container2">
+            <AiFillStar className="star1" />
+            <p className="food-rating">{foodItem.rating}</p>
+          </div>
           {isRenderCounter && (
             <div className="add-buttons-container">
               <button
